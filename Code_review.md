@@ -8,9 +8,9 @@ There are two parts of this code
 ## document_encoder/
 Span-BERT for doc_encoder
 
-###### base_encoder
-###### independent
-###### overlap
+* **base_encoder**
+* **independent**
+* **overlap**
 
 ## mention_model/
 
@@ -25,24 +25,24 @@ Span-BERT for doc_encoder
 
 #### controller/
 
-###### utils
+* **utils**
 setting the different type of bounded memory, the detail is define in controller/
 
-###### base_controller
+* **base_controller**
 1. line26,28, choosing different type of Encoder(Independent of Overlap)
 
 functions:
-* **get_span_embeddings**
-* **get_mention_width_scores**
-* **get_candidate_endpoints**
-* **get_pred_mentions**
+###### get_span_embeddings
+###### get_mention_width_scores
+###### get_candidate_endpoints
+###### get_pred_mentions
 
-* **get_genre_embedding**
-* **get_mention_embs_and_actions**
+get_genre_embedding
+get_mention_embs_and_actions
 1. get encoded document from doc_encoder
 2. 
 
-###### lfm_controller
+* **lfm_controller**
 Inherit from BaseController
 
 1. line14, LearnedFixedMemory from ./memory/lfm_memory.py
@@ -50,8 +50,8 @@ Inherit from BaseController
 forward pipeline:
 get_mention_embs_and_actions from base_controller
 
-###### lru_controller
-###### um_controller_no_ignore
-###### um_controller
+* **lru_controller**
+* **um_controller_no_ignore**
+* **um_controller**
 
 
